@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Now | DashAll</title>
+    <!-- Sharing our global stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SHARED HEADER -->
+    <header>
+        <div class="logo">DashAll ⚡</div>
+        <nav>
+           <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="order.html">Order Now</a>
+            <a href="track.html" class="nav-btn">Track Order</a>
+        </nav>
+    </header>
+
+    <!-- ORDER FORM CONTENT -->
+    <main>
+        <div class="details-panel">
+            <h2>Place a Delivery Order 🛵</h2>
+            <p>Fill in your delivery details below and we will dispatch a driver right away.</p>
+
+            <!-- THE FORM: Groups all user inputs together -->
+            <form id="orderForm" class="order-form">
+                
+                <label for="customerName">Your Name</label>
+                <input type="text" id="customerName" placeholder="e.g. Tangi" required>
+
+                <label for="serviceCategory">What are we delivering?</label>
+                <select id="serviceCategory">
+                    <option value="🍔 Hot Food Delivery ($2.99)">🍔 Hot Food Delivery ($2.99)</option>
+                    <option value="🛒 Express Groceries ($4.99)">🛒 Express Groceries ($4.99)</option>
+                    <option value="📦 Custom Courier Parcel ($6.50)">📦 Custom Courier Parcel ($6.50)</option>
+                </select>
+
+                <label for="deliveryAddress">Delivery Address / Neighborhood</label>
+                <input type="text" id="deliveryAddress" placeholder="e.g. Klein Windhoek, Nelson Mandela Ave" required>
+
+                <label for="orderNotes">Item Details or Instructions</label>
+                <textarea id="orderNotes" rows="3" placeholder="e.g. 2x Cheeseburger meals, gate code #1234"></textarea>
+
+                <button type="submit" class="submit-btn">Confirm & Place Order</button>
+            </form>
+        </div>
+
+        <!-- HIDDEN RECEIPT SUMMARY: Revealed by order.js after submission -->
+        <div id="orderReceipt" class="details-panel hidden">
+            <h3 id="receiptTitle">✅ Order Confirmed!</h3>
+            <p id="receiptBody"></p>
+        </div>
+    </main>
+
+    <!-- Page-Specific Script: Only runs on order.html -->
+    <script src="./order.js"></script>
+</body>
+</html>

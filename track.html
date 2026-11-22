@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Order | DashAll</title>
+    <!-- Sharing our global stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SHARED HEADER -->
+    <header>
+        <div class="logo">DashAll ⚡</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+             <a href="order.html">Order Now</a>
+            <a href="track.html" class="nav-btn">Track Order</a>
+        </nav>
+    </header>
+
+    <!-- TRACKING CONTENT -->
+    <main>
+        <div class="details-panel">
+            <h2>Live Order Tracking 🛵</h2>
+            <p>Enter your receipt number below (Try <strong>101</strong>, <strong>102</strong>, or <strong>103</strong>).</p>
+            
+            <div class="search-box">
+                <!-- Added IDs so track.js can read the input and listen to the button -->
+                <input type="text" id="orderInput" placeholder="e.g. 101">
+                <button id="checkBtn">Check Status</button>
+            </div>
+        </div>
+
+        <!-- NEW: Hidden Result Card (Reuses your existing CSS classes!) -->
+        <div id="orderResult" class="details-panel hidden">
+            <h3 id="resultHeader">Order Status</h3>
+            <p id="resultDetails">Details will load here...</p>
+        </div>
+    </main>
+
+    <!-- Page-Specific Script: Only runs on track.html -->
+    <script src="track.js"></script>
+</body>
+</html>
+

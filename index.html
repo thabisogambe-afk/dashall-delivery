@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashAll | Fast Local Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">DashAll ⚡</div>
+        <nav>
+             <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+             <a href="order.html">Order Now</a>
+            <a href="track.html" class="nav-btn">Track Order</a>
+        </nav>
+    </header>
+
+    <section class="hero-section" id="track">
+        <h1>Anything Delivered.<br>Right to Your Door.</h1>
+        <p>Food, groceries, or custom parcels—we handle it all.</p>
+        
+        <div class="search-box">
+            <input type="text" id="addressInput" placeholder="Enter your delivery address...">
+            <button id="findBtn">Find Food & Goods</button>
+            <p id="statusMessage"></p>
+        </div>
+    </section>
+
+    <main id="services">
+        <h2>What are you ordering today?</h2>
+        
+                <div class="category-grid">
+            <!-- Card 1: Food -->
+            <div class="category-card" id="foodCard">
+                <img src="./images/food.jpg" alt="Hot Food Delivery" class="card-img">
+                <h3>🍔 Hot Food</h3>
+                <p>Meals from your favorite local restaurants.</p>
+            </div>
+
+            <!-- Card 2: Groceries -->
+            <div class="category-card" id="groceryCard">
+                <img src="./images/groceries.JPG" alt="Fresh Groceries" class="card-img">
+                <h3>🛒 Groceries</h3>
+                <p>Fresh daily essentials delivered in minutes.</p>
+            </div>
+
+            <!-- Card 3: Custom Packages -->
+            <div class="category-card" id="parcelCard">
+                <img src="./images/parcel.jpg" alt="Custom Parcels" class="card-img">
+                <h3>📦 Custom Parcels</h3>
+                <p>Need something picked up and dropped off? Done.</p>
+            </div>
+        </div>
+
+                <!-- Existing category-grid ends here -->
+        </div>
+
+        <!-- NEW: Hidden Details Panel -->
+        <div id="detailsPanel" class="details-panel hidden">
+            <h3 id="panelTitle">Service Title</h3>
+            <p id="panelDescription">Service details will appear here.</p>
+            <button id="closePanelBtn" class="close-btn">Close Details ✖</button>
+        </div>
+
+    </main>
+     <!-- 4. THE FOOTER: Completes the HTML body skeleton -->
+    <footer>
+        <p><strong>DashAll ⚡</strong> — Fast Local Delivery across Windhoek, Namibia</p>
+        <p class="footer-sub">© 2026 DashAll Delivery Services. All rights reserved.</p>
+    </footer>
+
+   <!-- Adding a dot and a forward-slash tells the browser to look in the main folder -->
+<script src="./script.js"></script>
+</body>
+</html>
